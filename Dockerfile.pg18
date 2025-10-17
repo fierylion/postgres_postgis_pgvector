@@ -3,11 +3,11 @@ FROM postgres:18.0
 
 # Informações do mantenedor
 LABEL maintainer="fierylion"
-LABEL description="PostgreSQL 18.2 com PostGIS 3.5 e pgvector 0.8.1"
+LABEL description="PostgreSQL 18.0 com PostGIS 3.6 e pgvector 0.8.1"
 LABEL version="1.0"
 
 # Variáveis de ambiente para as versões
-ENV POSTGIS_VERSION=3.5.0
+ENV POSTGIS_VERSION=3.6.0
 ENV PGVECTOR_VERSION=0.8.1
 
 # Instalar dependências necessárias
