@@ -24,15 +24,17 @@ jobs:
     
     strategy:
       matrix:
-        postgres_version: [17, 18]
+        postgres_version: [16, 17, 18]
         include:
+          - postgres_version: 16
+            dockerfile: Dockerfile.pg16
+            tag_suffix: pg16
           - postgres_version: 17
             dockerfile: Dockerfile.pg17
             tag_suffix: pg17
           - postgres_version: 18
             dockerfile: Dockerfile.pg18
             tag_suffix: pg18
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
