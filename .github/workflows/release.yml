@@ -13,7 +13,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: skyconnect-inc/postgres_postgis_pgvector
+  IMAGE_NAME: fierylion/postgres_postgis_pgvector
   BUILDKIT: 1
  
 
