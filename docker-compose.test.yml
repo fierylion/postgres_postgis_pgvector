@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  postgres-17:
+    build:
+      context: .
+      dockerfile: Dockerfile.pg17
+    container_name: postgres-17-postgis-pgvector
+    environment:
+      POSTGRES_DB: testdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres17_data:/var/lib/postgresql/data
+
+  postgres-18:
+    build:
+      context: .
+      dockerfile: Dockerfile.pg18
+    container_name: postgres-18-postgis-pgvector
+    environment:
+      POSTGRES_DB: testdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres18_data:/var/lib/postgresql/data
+
+volumes:
+  postgres17_data:
+  postgres18_data:
