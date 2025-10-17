@@ -7,7 +7,7 @@ LABEL description="PostgreSQL 17.3 com PostGIS 3.5 e pgvector 0.8.1"
 LABEL version="1.0"
 
 # Variáveis de ambiente para as versões
-ENV POSTGIS_VERSION=3.5.0
+ENV POSTGIS_VERSION=3.5.4
 ENV PGVECTOR_VERSION=0.8.1
 
 # Instalar dependências necessárias
